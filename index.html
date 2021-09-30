@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- nav bar block -->
     <nav class="navbar navbar-expand-lg navbar-white bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color: white;">Notes Maker</a>
@@ -50,18 +51,28 @@
             </div>
         </div>
     </nav>
-    <div class="container " style="margin-top: 50px;">
+
+    <div class="container " style="margin-top: 50px; ">
         <h1>Welcome To Notes Maker</h1>
+
+        <!--Add title block -->
+        <div class="mb-3" >
+            <h5 class="card-title">Add title</h5>
+            <input type="text" class="form-control" id="addTitle" placeholder="Enter-Title">
+          </div>
+
+        <!-- Add notes block -->
         <div class="card" >
             <div class="card-body">
-                <h5 class="card-title">Type Here To Add a Note</h5>
+                <h5 class="card-title">Add note</h5>
                 <div class="form-group">
-                    <textarea class="form-control" id="addTxt" rows="7"></textarea>
+                    <textarea class="form-control" id="addTxt" rows="4"></textarea>
                 </div>
                 <button class="btn btn-primary" id="addBtn" style="margin-top: 9px;">Add Note</button>
             </div>
         </div>
 
+        <!-- Show card block -->
         <div id="notes"  class="row container-fluid "> </div>
         
 
