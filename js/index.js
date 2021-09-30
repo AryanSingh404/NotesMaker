@@ -4,13 +4,13 @@ showNotes();
 let addBtn = document.getElementById("addBtn");
 
 addBtn.addEventListener("click", function (e) {
-    // add text from dom
+    // add text 
     let addTxt = document.getElementById("addTxt");
 
-    // add title from dom
+    // add title 
     let addTitle = document.getElementById("addTitle");
 
-    //add notes from dom
+    //add notes 
     let notes = localStorage.getItem("notes");
 
     if (notes == null) {
@@ -89,7 +89,11 @@ search.addEventListener("input", function () {
     let noteCards = document.getElementsByClassName('noteCard');
     Array.from(noteCards).forEach(function (element) {
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
+        let cardTitle = element.getElementsByTagName("h5")[0].innerText;
         if (cardTxt.includes(inputVal)) {
+            element.style.display = "block";
+        }
+        else if (cardTitle.includes(inputVal)){
             element.style.display = "block";
         }
         else {
